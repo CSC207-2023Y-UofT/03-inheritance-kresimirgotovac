@@ -42,8 +42,7 @@ class BagMain {
         // TODO: Implement this.
         int count = 0;
         for (int i = 0; i < bags.length; i++) {
-        if (bags[i].getClass().equals(HandBag.class)) {
-            assert bags[i] instanceof CrossbodyBag;
+        if (bags[i].getClass().equals(CrossbodyBag.class)) {
             count += ((CrossbodyBag) bags[i]).getNumberOfStraps();
         }
         }
