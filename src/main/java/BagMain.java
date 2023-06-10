@@ -1,3 +1,5 @@
+import org.junit.Assert;
+
 /* This file contains a few exercises and TODOs for you to fill.
  * Make sure you do the TODOs in Bag.java, HandBag.java and CrossbodyBag.java
  * as the tasks in this file depends on the completion on those!
@@ -40,7 +42,8 @@ class BagMain {
         // TODO: Implement this.
         int count = 0;
         for (int i = 0; i < bags.length; i++) {
-        if (bags[i].getClass().isInstance(HandBag.class)) {
+        if (bags[i].getClass().equals(HandBag.class)) {
+            assert bags[i] instanceof CrossbodyBag;
             count += ((CrossbodyBag) bags[i]).getNumberOfStraps();
         }
         }
